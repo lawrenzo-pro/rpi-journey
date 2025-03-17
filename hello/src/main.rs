@@ -4,7 +4,7 @@ use std::time::Duration;
 use rppal::{gpio::Gpio,system::DeviceInfo};
 fn main() -> Result<(),Box<dyn Error>>{
     let led1_pin = 3;
-    let led2_pin =4;
+    let led2_pin = 4;
 
     println!("Running on a: {} ", DeviceInfo::new()?.model());
     let mut led1 = Gpio::new()?.get(led1_pin)?.into_output();
